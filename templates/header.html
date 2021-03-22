@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta chardset="UTF-8">
+		<meta name="author" content="absucc">
+		<meta name="application-name" content="XKmodern">
+		<meta name="keywords" content="xkcd,Alternative front-end,front-end,webapp">
+		<meta name="description" content="{{alt}}">
+		<meta property="og:title" content="{{title}} (#{{thiscomic}})">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="{{urlbase}}">
+		<meta property="og:image" content="{{comic}}">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Comapatible" content="id=edge">
+
+		<link rel="icon" href="{{ url_for('static', filename='img/newfavicon.png') }}" type="image/png">
+		<link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="https://xkcd.com/atom.xml">
+		<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="https://xkcd.com/rss.xml">
+
+		<title>{{booktitle}}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	</head>
+	<body>
+		<header>
+			<h1>XKmodern</h1>
+			<form action="{{search_action}}" method="GET">
+				<div class="input-group">
+				<span class="input-group-text" id="basic-addon1">#</span>
+				<input class="form-control me-2" type="number" placeholder="{{random_num}}" aria-label="Search" aria-describedby="basic-addon1" name="num">
+				</div>
+			</form>
+		</header>
