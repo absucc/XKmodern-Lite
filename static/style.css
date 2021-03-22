@@ -1,2 +1,9 @@
 body{text-align:center;font-family:sans-serif;}
 header h1 {width:auto; height:24; font-family:'Courier New', Courier, monospace; color:#96a8c8; font-display:bold;}
+#comic {width:auto;height:auto;}
+@media only screen and (max-width: 600px) {
+  #comic {
+    width: 320px;
+    height: auto;
+  }
+}
