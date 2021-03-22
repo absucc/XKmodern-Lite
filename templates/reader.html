@@ -1,0 +1,37 @@
+{% include "header.html" %}
+		<main>
+			<div class="comic_table">
+				<h2><b>{{title}}</b> (#{{thiscomic}})</h2>
+{% include "buttons.html" %}
+
+				<div id="comic_section">
+          <a href="{{comic}}"><img id="comic" src="{{comic}}" alt="{{alt}}"></a>
+        </div>
+				<script>
+					var thiscomic = {{thiscomic}};
+						if (thiscomic == 1608) {
+							document.getElementById("comic_section").innerHTML = `<div class="desktop">
+									<iframe width="770px" height="700px" src="https://m.xkcd.com/1608/#explore" title="Game">
+										<div class="alert alert-warning" role="alert">
+											Your web browser is not compatible with the tag <code><iframe></code>, please try to enter here to play the game: <a href="https://xkcd.com/1608/"></a>
+										</div>
+									</iframe>
+							</div>
+							<div class="mobile"><h3>Sorry, but this game is exclusive for desktop computers</h3></div>`;
+						}
+					</script>
+{% include "buttons.html" %}
+			</div>
+			<div>
+				<br>
+				<!--<b>Permanent URL:</b> https://xkcd.l64.repl.co/?num={{thiscomic}}-->
+				<p>
+					<a href="https://www.explainxkcd.com/wiki/index.php/{{thiscomic}}"><button class="btn btn-outline-primary">Explain XKCD</button></a><br>
+					<b>Date:</b> {{thedate}}<br>
+					<b>Description:</b> {{alt}}<br>
+					<b>Permanent URL:</b> {{urlbase}}<br>
+				</p>
+			</div>
+			<div><br><script src="https://utteranc.es/client.js" repo="{{utes_repo}}" issue-term="pathname" theme="github-light" crossorigin="anonymous" async></script></div>
+		</main>
+{% include "footer.html" %}
